@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-cloud-client #ЗўЮёзЂВсеп
+server:
+  port: 9001
+
+
+eureka:
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
