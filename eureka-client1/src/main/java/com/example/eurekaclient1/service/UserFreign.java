@@ -4,12 +4,14 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Component
-@FeignClient(value = "SPRING-CLOUD-CLIENT",name = "SPRING-CLOUD-CLIENT")
+@FeignClient(value = "SPRING-CLOUD-CLIENT", fallback= UserFallback.class)
 public interface UserFreign {
 
-    @GetMapping(value = "/info")
+    @RequestMapping(value = "/info" ,method = RequestMethod.GET)
     public String Hello();
 
     @GetMapping(value = "/user/{id}")

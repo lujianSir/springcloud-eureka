@@ -10,3 +10,6 @@ eureka:
     register-with-eureka: true
     serviceUrl:
       defaultZone: http://localhost:5000/eureka/
+feign: #开启熔断
+  hystrix:
+    enabled: true

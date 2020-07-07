@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class UserController {
 
-    @GetMapping(value = "/info" )
+    @RequestMapping(value = "/info" ,method = RequestMethod.GET)
     public String Hello(){
         return "hello xxx，this is eureka-client messge";
     }
 
-    @GetMapping(value = "/user/{id}" )
+    @RequestMapping(value = "/user/{id}" ,method = RequestMethod.GET)
     public String user(@PathVariable("id") String id){
         return "测试成功啦啦啦啦啦啦"+id;
     }
