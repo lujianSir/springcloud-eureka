@@ -1,0 +1,25 @@
+server:
+  port: 6002
+spring:
+  application:
+    name: eureka-config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lujianSir/test-config # 配置git仓库地址
+          search-paths: springcloud-config # 配置仓库路径
+          username: 1972689216@qq.com # 访问git仓库的用户名
+          password: lj5511906 # 访问git仓库的用户密码 如果Git仓库为公开仓库，可以不填写用户名和密码，如果是私有仓库需要填写
+          skip-ssl-validation: true
+      label: master # 配置仓库的分支
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:5000/eureka/
+
+logging:
+  level:
+    root: info
+    com.spring.cloud.config.server: debug

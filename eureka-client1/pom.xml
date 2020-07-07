@@ -24,6 +24,14 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
+
+        <!-- SpringCloud Config客户端 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+        </dependency>
+
+
         <!--与原来的feign依赖包引用不一样-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

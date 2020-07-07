@@ -1,18 +1,18 @@
-package com.example.eurekaclient;
+package com.example.eurekaconfig;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
 
 @SpringBootApplication
-@EnableFeignClients  //启用feign进行远程调用
+@EnableConfigServer
 @EnableEurekaClient
-public class EurekaClientApplication {
+public class EurekaConfigApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(EurekaClientApplication.class, args);
+        SpringApplication.run(EurekaConfigApplication.class, args);
     }
 
 }

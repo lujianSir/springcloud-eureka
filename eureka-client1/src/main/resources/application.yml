@@ -1,13 +1,12 @@
 spring:
   application:
-    name: spring-cloud-client1 #·şÎñ×¢²áÕß
+    name: spring-cloud-client1 #é…ç½®æœåŠ¡çš„åç§°
 server:
-  port: 9002
-
+  port: 6006
 
 eureka:
   client:
     fetch-registry: true
     register-with-eureka: true
     serviceUrl:
-      defaultZone: http://localhost:8001/eureka/
+      defaultZone: http://localhost:5000/eureka/

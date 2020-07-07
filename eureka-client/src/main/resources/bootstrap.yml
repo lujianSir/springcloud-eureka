@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: spring-cloud-client #服务消费者
+  cloud:
+    config:
+      name: config-single-client #需要从github上读取的资源名称，注意没有yml后缀名
+      profile: dev   #本次访问的配置项
+      label: master
+      uri: http://localhost:6002/
+
+
+
+#spring:
+#  application:
+#    name: spring-cloud-client #服务注册者
+#server:
+#  port: 9001
+#
+#
+
+
+
