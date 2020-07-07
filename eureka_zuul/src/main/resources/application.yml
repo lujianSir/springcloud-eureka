@@ -1,0 +1,21 @@
+spring:
+  application:
+    name : eureka-zuul
+server:
+  port : 6005
+
+eureka:
+  client:
+    service-url:
+      defaultZone : http://localhost:5000/eureka/
+
+zuul:
+  routes:
+    spring-cloud-client :
+      path : /user/**
+      serviceId : spring-cloud-client
+
+    spring-cloud-client1:
+      path: /student/**
+      serviceId: spring-cloud-client1
+

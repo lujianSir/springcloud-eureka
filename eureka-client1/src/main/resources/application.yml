@@ -1,15 +1,15 @@
 spring:
   application:
     name: spring-cloud-client1 #配置服务的名称
-server:
-  port: 6006
+  server:
+    port: 6006
 
-eureka:
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    serviceUrl:
-      defaultZone: http://localhost:5000/eureka/
-feign: #开启熔断
+  eureka:
+    client:
+      fetch-registry: true
+      register-with-eureka: true
+      serviceUrl:
+        defaultZone: http://localhost:5000/eureka/
+  feign: #开启熔断
   hystrix:
     enabled: true

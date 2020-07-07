@@ -20,6 +20,7 @@
         <module> eureka-client</module>
         <module> eureka-client1</module>
         <module> eureka-config</module>
+        <module> eureka_zuul</module>
     </modules>
 
 
