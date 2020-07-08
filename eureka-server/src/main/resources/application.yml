@@ -1,5 +1,6 @@
 server:
   port: 5000
+  enable-self-preservation: false
 
 eureka:
   instance:
